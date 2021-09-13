@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+<div style="display: block; position: fixed; bottom: 0vh; left: 0; height: 100vh; width: 100vw;" id="cont">
+<div id="head">
+<h1>shaurya singh</h1>
+<p style="position: fixed; bottom: 0%;">click anywhere to continue</p>	
+</div>
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; z-index: -1; text-transform: capitalize; background: #fff;cursor: pointer" id="aboutme">	
+	<h2>About Me</h2>
+	<p style="position: fixed; bottom: 35%;">I'm a ten year-old coder working on a word processor named linum. <a href="https://linumtext.netlify.app">check it out</a></p>
+	<p style="position: fixed; bottom: 0;">Click Anywhere to continue</p>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; z-index: -2; text-transform: capitalize; background: #fff;cursor: pointer" id="mail">	
+	<h2>contact</h2>
+	<h3 style="position: fixed; bottom: 40%;">📧</h3>
+	<p style="position: fixed; bottom: 35%; text-transform: lowercase">shauryaville@gmail.com</p>
+	<p style="position: fixed; bottom: 30%;">please don't spam in my email</p>
+	<p style="position: fixed; bottom: 0;">Click Anywhere to continue</p>
+</div>
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; text-transform: capitalize; background: #fff; z-index: -3;" id="statushead">	
+	<h2>my status</h2>
+	<h3 style="position: fixed; bottom: 40%;">last modified 1/9/2021</h3>
+	<p style="position: fixed; bottom: 35%; border-radius: 12px; border: solid #ccc 1px; padding: 3px;cursor: pointer" onclick="document.getElementById('statushead').addEventListener('click', function() {
+		document.getElementById('statushead').style.animation = 'fade 0.5s'
+		setTimeout(() => { document.getElementById('statushead').style.display = 'none' }, 490);
+	})">click to view</p>
+</div>
+<div id="status" style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; text-transform: capitalize; background: #fff; z-index: -4">
+	<p style="position: fixed; top: 0; left: 2vw; cursor: pointer" onclick="window.location.reload();">Back To Home</p>
+	<h2>Hello</h2>
+	<p style="position: fixed; bottom: 0; cursor: pointer" id="emoji">Do Not Click</p>
+</div>	
+<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100vw; position: fixed; top: 0; left: 0; text-transform: capitalize; background: #fff; z-index: -5">
+	<p style="position: fixed; top: 0; left: 2vw; cursor: pointer" onclick="window.location.reload();">Back To Home</p>
+	<h2>🍟</h2>
+</div>	
+</div>	
+<div style="position: fixed; top: 0; left: 0; height: 100%; width: 100vw; z-index: -1;">
+	
+</div>
+<style>
+@import url(https://fonts.googleapis.com/css2?family=Inter);
+	
+	* {font-family: Inter; text-align: center; -webkit-tap-highlight-color: rgba(0,0,0,0);}
+	
+	strong {font-weight: 900;}
+	
+	img.emoji {
+   		height: 1em;
+   		width: 1em;
+   		margin: 0 .05em 0 .1em;
+   		vertical-align: -0.1em;
+	}
+	
+	#head {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100wv;
+		text-transform: capitalize;
+		color: white;
+		background: url(https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2106&q=80); object-fit: cover; background-size: cover;
+		user-select: none;
+		cursor: pointer;
+	}
+	
+	@keyframes fade {
+		from {opacity: 1}
+		to {opacity: 0;}
+	}
+</style>
+
+<script>
+	twemoji.parse(document.body, {
+		folder: 'svg',
+		ext: '.svg',
+	});
+	
+	document.getElementById('head').addEventListener('click', function() {
+		document.getElementById('head').style.animation = 'fade 0.5s'
+		setTimeout(() => { document.getElementById('head').style.display = 'none' }, 490);
+	})
+	document.getElementById('aboutme').addEventListener('click', function() {
+		document.getElementById('aboutme').style.animation = 'fade 0.5s'
+		setTimeout(() => { document.getElementById('aboutme').style.display = 'none' }, 490);
+	})
+	document.getElementById('mail').addEventListener('click', function() {
+		document.getElementById('mail').style.animation = 'fade 0.5s'
+		setTimeout(() => { document.getElementById('mail').style.display = 'none' }, 490);
+	})
+	document.getElementById('emoji').addEventListener('click', function() {
+		document.getElementById('status').style.animation = 'fade 0.5s'
+		setTimeout(() => { document.getElementById('status').style.display = 'none' }, 490);
+	})
+</script>
