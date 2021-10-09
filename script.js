@@ -31,14 +31,14 @@ var inits = {
     'undo redo | bold italic underline strikethrough fontselect fontsizeselect formatselect  alignleft aligncenter alignright alignjustify forecolor backcolor ltr rtl lineheight | subscript superscript | download upload impcur new | numlist bullist | outdent indent | preview print | casechange | operate | tts | spellcheck | version',    
   height: 580,
   skin_url: 'skin/skins/ui/linum',
-  icons: 'svg-icons',    
+  icons: 'material',    
   menubar: 'file insert edit formatpainter table',
   menu: {
       file: {title: 'File', items: 'm-save m-open m-impcur m-new'},
 	  formatpainter: {title: 'Format Painter', items: 'copyformat pasteformat resetformat'},
-	  insert: {title: 'Insert', items: 'insertdatetime template image link inserttable codesample charmap emoticons anchor hr nonbreaking toc pagebreak'}
+	  insert: {title: 'Insert', items: 'insertdatetime template image link inserttable codesample charmap emoticons anchor hr nonbreaking toc pagebreak'},
   },	
-  content_css: 'style.css, document',
+  content_css: 'style.css, document, writer',
   content_style: `body {font-family: Inter, Emoji, sans-serif;}`,	
   fontsize_formats: '8pt 10pt 12pt 14pt 16pt 18pt 20pt 22pt 24pt 26pt 28pt 30pt 32pt 34pt 36pt 38pt 40pt 42pt 44pt 46pt 48pt 50pt 52pt 54pt 56pt 58pt 60pt 62pt 64pt 66pt 68pt 70pt 72pt 74pt 76pt 78pt 80pt 82pt 84pt 86pt 88pt 90pt 92pt 94pt 96pt 98pt 100pt 102pt 104pt 106pt 108pt 110pt 112pt 114pt 116pt 118pt 120pt 122pt 124pt 126pt 128pt 130pt 9pt 11pt 13pt 15pt 17pt 19pt 21pt 23pt 25pt 27pt 29pt 31pt 33pt 35pt 37pt 39pt 41pt 43pt 45pt 47pt 49pt 51pt 53pt 55pt 57pt 59pt 61pt 63pt 65pt 67pt 69pt 71pt 73pt 75pt 77pt 79pt 81pt 83pt 85pt 87pt 89pt 91pt 93pt 95pt 97pt 99pt 101pt 103pt 105pt 107pt 109pt 111pt 113pt 115pt 117pt 119pt 121pt 123pt 125pt 127pt 129pt 131pt',
   branding: false,	
@@ -181,8 +181,348 @@ var inits = {
   contextmenu: false,
   draggable_modal: true,
   emoticons_append: {
-	  
-  },	
+	  heart_on_fire: {
+	  	keywords: ['heart on fire', 'burning heart'],
+		char: '❤️‍🔥',
+		 category: 'symbols'
+  	 },
+     smiling_face_with_tear: {
+	  	keywords: ['smiling face with tear'],
+		char: '🥲',
+		 category: 'people' 
+  	 },
+	 disguised_face: {
+		 keywords: ['disguised face', 'disguise'],
+		 char: '🥸',
+		 category: 'people'
+	 },
+	 pinched_fingers: {
+		 keywords: ['pinch', 'finger', 'pinched fingers'],
+		 char: '🤌',
+		 category: 'people'
+	 },
+	 anatomical_heart: {
+		 keywords: ['anatomy', 'heart', 'anatomical heart', 'human'],
+		 char: '🫀',
+		 category: 'symbols'
+	 },
+	 lungs: {
+		 keywords: ['lungs', 'anatomy', 'human', 'lung'],
+		 char: '🫁',
+		 category: 'symbols'
+	 },
+	 ninja: {
+		 keywords: ['ninja'],
+		 char: '🥷',
+		 category: 'people'
+	 },
+	 man_wearing_tuxedo: {
+		 keywords: ['tuxedo man', 'man wearing tuxedo'],
+		 char: '🤵‍♂️',
+		 category: 'people'
+	 }, 
+	 woman_wearing_tuxedo: {
+		 keywords: ['tuxedo woman', 'woman wearing tuxedo'],
+		 char: '🤵‍♀️',
+		 category: 'people'
+	 },
+	 man_with_veil: {
+		 keywords: ['viel', 'man wearing veil', 'man with veil'],
+		 char: '👰‍♂️',
+		 category: 'people',
+		 fitzapatrick_scale: '1'
+	 },
+	 woman_with_veil: {
+		 keywords: ['viel', 'woman wearing veil', 'woman with veil'],
+		 char: '👰‍♀️',
+		 category: 'people'
+	 },
+	 woman_feeding_baby: {
+		 keywords: ['woman', 'baby', 'woman feeding baby'],
+		 char: '👩‍🍼',
+		 category: 'people'
+	 },
+	 man_feeding_baby: {
+		 keywords: ['man', 'baby', 'man feeding baby'],
+		 char: '👨‍🍼',
+		 category: 'people'
+	 },	  
+	 person_feeding_baby: {
+		 keywords: ['person', 'baby', 'person feeding baby'],
+		 char: '🧑‍🍼',
+		 category: 'people'
+	 },
+	 mx_claus: {
+		 keywords: ['santa', 'christmas', 'claus', 'mx claus', 'santa claus'],
+		 char: '🧑‍🎄',
+		 category: 'people'
+	 },
+	 hugging: {
+		 keywords: ['hug', 'hugging'],
+		 char: '🫂',
+		 category: 'people'
+	 },
+	 black_Cat: {
+		 keywords: ['cat', 'black', 'black cat'],
+		 char: '🐈‍⬛',
+		 category: 'Animals and Nature'
+	 },
+	 bison: {
+		 keywords: ['bison'],
+		 char: '🦬',
+		 category: 'Animals and Nature'
+	 },
+	 mammoth: {
+		 keywords: ['mammoth', 'mastodon'],
+		 char: '🦣',
+		 category: 'Animals and Nature'
+	 }, 
+	 beaver: {
+		 keywords: ['beaver'],
+		 char: '🦫',
+		 category: 'Animals and Nature'
+	 }, 
+	 polar_bear: {
+		 keywords: ['bear', 'snowy bear', 'polar bear'],
+		 char: '🐻‍❄️',
+		 category: 'Animals and Nature'
+	 },
+	 dodo: {
+		 keywords: ['dodo'],
+		 char: '🦤',
+		 category: 'Animals and Nature'
+	 },
+	 Feather: {
+		 keywords: ['feather'],
+		 char: '🪶',
+		 category: 'Animals and Nature'
+	 },
+	 seal: {
+		 keywords: ['seal'],
+		 char: '🦭',
+		 category: 'Animals and Nature'
+	 }, 
+	 beetle: {
+		 keywords: ['beetle'],
+		 char: '🪲',
+		 category: 'Animals and Nature'
+	 },
+	 cockroach: {
+		 keywords: ['cockroach'],
+		 char: '🪳',
+		 category: 'Animals and Nature'
+	 },
+	 fly: {
+		 keywords: ['fly'],
+		 char: '🪰',
+		 category: 'Animals and Nature'
+	 },
+	 worm: {
+		 keywords: ['worm', 'earthworm'],
+		 char: '🪱',
+		 category: 'Animals and Nature'
+	 },
+	 potted_plant: {
+		 keywords: ['plant', 'pot', 'potted plant'],
+		 char: '🪴',
+		 category: 'objects'
+	 }, 
+	 blueberries: {
+		 keywords: ['berry', 'blueberries'],
+		 char: '🫐',
+		 category: 'Food and Drink'
+	 }, 
+	 olive: {
+		 keywords: ['olive'],
+		 char: '🫒',
+		 category: 'Food and Drink'
+	 },
+	 bell_pepper: {
+		 keywords: ['pepper', 'bell pepper'],
+		 char: '🫑',
+		 category: 'Food and Drink'
+	 },
+	 flatbread: {
+		 keywords: ['flatbread', 'naan', 'arepa', 'gordita', 'pupusa', 'lavash', 'matzah', 'pita'],
+		 char: '🫓',
+		 category: 'Food and Drink'
+	 },
+	 tamale: {
+		 keywords: ['tamale'],
+		 char: '🫔',
+		 category: 'Food and Drink'
+	 }, 
+	 fondue: {
+		 keywords: ['fondue', 'cheese fondue'],
+		 char: '🫕',
+		 category: 'Food and Drink'
+	 }, 
+	 teapot: {
+		 keywords: ['teapot'],
+		 char: '🫖',
+		 category: 'objects'
+	 },
+	 bubble_tea: {
+		 keywords: ['bubble', 'tea', 'bubble tea'],
+		 char: '🧋',
+		 category: 'Food and Drink'
+	 },
+	 rock: {
+		 keywords: ['rock', 'stone'],
+		 char: '🪨',
+		 category: 'Animals and Nature'
+	 },
+	 wood_log: {
+		 keywords: ['wood', 'log'],
+		 char: '🪵',
+		 category: 'Animals and Nature'
+	 }, 
+	 hut: {
+		 keywords: ['hut'],
+		 char: '🛖',
+		 category: 'Travel and Places'
+	 }, 
+	 pickup_truck: {
+		 keywords: ['truck', 'pickup', 'pickup truck'],
+		 char: '🛻',
+		 category: 'Travel and Places'
+	 },
+	 roller_skates: {
+		 keywords: ['skates', 'roller skates'],
+		 char: '🛼',
+		 category: 'activity'
+	 },
+	 magic_Wand: {
+		 keywords: ['magic', 'wand', 'magic wand'],
+		 char: '🪄',
+		 category: 'objects'
+	 },
+	 piñata: {
+		 keywords: ['pinata', 'piñata'],
+		 char: '🪅',
+		 category: 'objects'
+	 }, 
+	 nesting_dolls: {
+		 keywords: ['doll', 'nesting', 'nesting dolls', 'russia'],
+		 char: '🪆',
+		 category: 'objects'
+	 }, 
+	 sewing_needle: {
+		 keywords: ['needle', 'sew', 'sewing needle'],
+		 char: '🪡',
+		 category: 'objects'
+	 },
+	 knot: {
+		 keywords: ['knot', 'loop'],
+		 char: '🪢',
+		 category: 'objects'
+	 },
+	 flip_flops: {
+		 keywords: ['flip-flop', 'flip flop', 'thong sandal', 'flip-flop', 'flip flop', 'thong sandal'],
+		 char: '🩴',
+		 category: 'objects'
+	 },
+	 military_helmet: {
+		 keywords: ['helmet', 'military helmet', 'army helmet'],
+		 char: '🪖',
+		 category: 'objects'
+	 }, 
+	 accordion: {
+		 keywords: ['Accordion'],
+		 char: '🪗',
+		 category: 'objects'
+	 }, 
+	 long_drum: {
+		 keywords: ['Long Drum'],
+		 char: '🪘',
+		 category: 'objects'
+	 },
+	 coin: {
+		 keywords: ['Coin'],
+		 char: '🪙',
+		 category: 'objects'
+	 },
+	 boomerang: {
+		 keywords: ['Boomerang'],
+		 char: '🪃',
+		 category: 'objects'
+	 },
+	 carpentry_saw: {
+		 keywords: ['Saw', 'Carpentry Sae'],
+		 char: '🪚',
+		 category: 'objects'
+	 }, 
+	 screwdriver: {
+		 keywords: ['Screwdriver'],
+		 char: '🪛',
+		 category: 'objects'
+	 }, 
+	 hook: {
+		 keywords: ['Hook'],
+		 char: '🪝',
+		 category: 'objects'
+	 }, 
+	 ladder: {
+		 keywords: ['Ladder'],
+		 char: '🪜',
+		 category: 'objects'
+	 }, 
+	 elevator: {
+		 keywords: ['Elevator'],
+		 char: '🛗',
+		 category: 'objects'
+	 },
+	 mirror: {
+		 keywords: ['Mirror'],
+		 char: '🪞',
+		 category: 'objects'
+	 },
+	 window: {
+		 keywords: ['Window'],
+		 char: '🪟',
+		 category: 'objects'
+	 },
+	 plunger: {
+		 keywords: ['Plunger'],
+		 char: '🪠',
+		 category: 'objects'
+	 }, 
+	 mouse_trap: {
+		 keywords: ['Mouse Trap'],
+		 char: '🪤',
+		 category: 'objects'
+	 }, 
+	 bucket: {
+		 keywords: ['Bucket'],
+		 char: '🪣',
+		 category: 'objects'
+	 },
+	 toothbrush: {
+		 keywords: ['Toothbrush'],
+		 char: '🪥',
+		 category: 'objects'
+	 },
+	 headstone: {
+		 keywords: ['Headstone'],
+		 char: '🪦',
+		 category: 'objects'
+	 },
+	 placard: {
+		 keywords: ['Placard'],
+		 char: '🪧',
+		 category: 'objects'
+	 }, 
+	 transgender_symbol: {
+		 keywords: ['Transgender Symbol'],
+		 char: '⚧️',
+		 category: 'symbols'
+	 },
+	 transgender: {
+		 keywords: ['Transgender'],
+		 char: '🏳️‍⚧️',
+		 category: 'flags'
+	 },	
+},	
   setup: function(editor) {
 	  //Shortcuts
 	  editor.addShortcut(
@@ -238,7 +578,7 @@ var inits = {
         tinymce.get('main').dom.toggleClass(tinymce.get('main').dom.select('*'), 'capitalise')   
       },
       onItemAction: function (api, value) {
-        tinymce.get('main').dom.toggleClass(tinymce.get('main').dom.select('*'), value)  
+        tinymce.get('main').dom.select('*').style.textTransform = value 
       },
       fetch: function (callback) {
       var items = [
@@ -255,7 +595,7 @@ var inits = {
             {
               type: 'choiceitem',
               text: 'Each Word Capitalised',
-              value: 'capitalise'
+              value: 'capitalize'
             }
           ];
           callback(items);
@@ -499,9 +839,9 @@ var inits = {
   })
 tinymce.IconManager.add('svg-icons', {
     icons: {
-        'accessibility-check': '<svg width="16" height="16"><path fill-rule="nonzero" d="M7.9 11l-.3 3.1a1 1 0 11-2-.2L6.3 7H3a1 1 0 010-2h10a1 1 0 010 2H9.7l.7 6.9a1 1 0 11-2 .2l-.3-3h-.2zM8 5a2 2 0 110-4 2 2 0 010 4z"/></svg>',
-        'action-next': '<svg width="16" height="16"><path fill-rule="nonzero" d="M8 8l2-2a1 1 0 111.5 1.3l-2.9 2.9a1 1 0 01-1.4 0L4.4 7.3A1 1 0 015.8 6L7.9 8z"/></svg>',
-        'action-prev': '<svg width="16" height="16"><path fill-rule="nonzero" d="M8 8l-2.2 2.2a1 1 0 11-1.4-1.5L7.2 6a1 1 0 011.4 0l2.9 2.8a1 1 0 11-1.5 1.5L8 8z"/></svg>',
+        'accessibility-check': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -5 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M5.90040404,10.0156183 L5.57640804,13.1030489 C5.51867857,13.653166 5.02661696,14.0522519 4.47735768,13.9944323 C3.92809841,13.9366127 3.52963478,13.4437825 3.58736425,12.8936654 L4.30980443,6.00937098 L1,6.00937098 C0.44771525,6.00937098 0,5.56095647 0,5.00780915 C0,4.45466182 0.44771525,4.00624732 1,4.00624732 L11,4.00624732 C11.5522847,4.00624732 12,4.45466182 12,5.00780915 C12,5.56095647 11.5522847,6.00937098 11,6.00937098 L7.69019557,6.00937098 L8.41263575,12.8936654 C8.47036522,13.4437825 8.07190159,13.9366127 7.52264232,13.9944323 C6.97338304,14.0522519 6.48132143,13.653166 6.42359196,13.1030489 L6.09959596,10.0156183 L5.90040404,10.0156183 Z M6,4.00624732 C4.8954305,4.00624732 4,3.10941831 4,2.00312366 C4,0.89682901 4.8954305,0 6,0 C7.1045695,0 8,0.89682901 8,2.00312366 C8,3.10941831 7.1045695,4.00624732 6,4.00624732 Z"></path></svg>',
+        'action-next': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -8 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M7.071 5.314l4.95-4.95a1 1 0 1 1 1.414 1.414L7.778 7.435a1 1 0 0 1-1.414 0L.707 1.778A1 1 0 1 1 2.121.364l4.95 4.95z"></path></svg>',
+        'action-prev': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -7.5 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M7.071 2.828l-4.95 4.95A1 1 0 0 1 .707 6.364L6.364.707a1 1 0 0 1 1.414 0l5.657 5.657a1 1 0 0 1-1.414 1.414l-4.95-4.95z"></path></svg>',
         'align-center': '<svg width="16" height="16"><path d="M4 3h8a1 1 0 010 2H4a1 1 0 110-2zm0 8h8a1 1 0 010 2H4a1 1 0 010-2zM2 7h12a1 1 0 010 2H2a1 1 0 110-2z" fill-rule="evenodd"/></svg>',
         'align-justify': '<svg width="16" height="16"><path d="M2 3h12a1 1 0 010 2H2a1 1 0 110-2zm0 8h12a1 1 0 010 2H2a1 1 0 010-2zm0-4h12a1 1 0 010 2H2a1 1 0 110-2z" fill-rule="evenodd"/></svg>',
         'align-left': '<svg width="16" height="16"><path d="M2 3h6a1 1 0 110 2H2a1 1 0 110-2zm0 8h8a1 1 0 010 2H2a1 1 0 010-2zm0-4h12a1 1 0 010 2H2a1 1 0 110-2z" fill-rule="evenodd"/></svg>',
@@ -595,7 +935,7 @@ tinymce.IconManager.add('svg-icons', {
         'quote': '<svg width="16" height="16"><path fill-rule="nonzero" d="M1 9V8a5 5 0 015-5 1 1 0 110 2 3 3 0 00-2.2 1H4a3 3 0 11-3 3zm3 1a1 1 0 100-2 1 1 0 000 2zm5-1V8a5 5 0 015-5 1 1 0 010 2 3 3 0 00-2.2 1h.2a3 3 0 11-3 3zm3 1a1 1 0 100-2 1 1 0 000 2z"/></svg>',
         'redo': '<svg width="16" height="16"><path fill-rule="nonzero" d="M10.7 4.6H6c-2.2 0-4 1.7-4 3.8V13c0 .5.4.9 1 .9s1-.4 1-1V8.5c0-1 .9-1.9 2-1.9h4.6L9.5 7.7A1 1 0 0010.9 9l2.8-2.8c.4-.4.4-1 0-1.4L11 2a1 1 0 00-1.4 1.5l1.2 1.1z"/></svg>',
         'reload': '<svg width="16" height="16"><path fill-rule="nonzero" d="M1 6.8a6.5 6.5 0 0111.7-3.2l.3-1.5a1 1 0 012 .3l-.7 4a1 1 0 01-1.2.8l-4-.7a1 1 0 11.4-2l1.6.3A4.5 4.5 0 003 7H3a1 1 0 11-2-.2zm14 2.4a6.5 6.5 0 01-11.7 3.4L3 14a1 1 0 01-2-.3l.7-4c.1-.5.6-.9 1.2-.8l4 .7a1 1 0 11-.4 2l-1.6-.3a4.5 4.5 0 008-2.4h.1a1 1 0 112 .2z"/></svg>',
-        'remove-formatting': '<svg width="16" height="16"><path d="M9.3 5L7 12.3a1 1 0 11-2-.6L7.2 5H4a1 1 0 110-2h8a1 1 0 010 2H9.3zm3.4 6.2l.7.7a1 1 0 11-1.5 1.5l-.7-.7-.7.7a1 1 0 01-1.4-1.5l.7-.7-.7-.7a1 1 0 011.4-1.4l.7.7.7-.7a1 1 0 111.5 1.4l-.7.7z" fill-rule="evenodd"/></svg>',
+        'remove-formatting': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6.5 -6.5 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M6.326 2L3.95 9.309a1 1 0 1 1-1.902-.618L4.223 2H1a1 1 0 1 1 0-2h8a1 1 0 1 1 0 2H6.326zm3.33 6.243l.708.707a1 1 0 1 1-1.414 1.414l-.707-.707-.707.707A1 1 0 0 1 6.12 8.95l.707-.707-.707-.707A1 1 0 0 1 7.536 6.12l.707.707.707-.707a1 1 0 1 1 1.414 1.415l-.707.707z"></path></svg>',
         'remove': '<svg width="16" height="16"><path fill-rule="nonzero" d="M12.8 6l-.7 8c0 .6-.5 1-1 1H4.9a1 1 0 01-1-1l-.7-8H3a1 1 0 01-1-1V2c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v3c0 .6-.4 1-1 1h-.2zM12 4V3H4v1h8zM5.2 6l.6 7h4.4l.6-7H5.2zM8 7c.6 0 1 .4 1 1v3a1 1 0 01-2 0V8c0-.6.4-1 1-1z"/></svg>',
         'resize-handle': '<svg width="16" height="16"><path fill-rule="nonzero" d="M13.5 12a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0-4a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm-4 4a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/></svg>',
         'resize': '<svg width="16" height="16"><path fill-rule="nonzero" d="M6 3H4.4l8.6 8.6V10a1 1 0 012 0v4c0 .6-.4 1-1 1h-4a1 1 0 010-2h1.6L3 4.4V6a1 1 0 11-2 0V2c0-.6.4-1 1-1h4a1 1 0 110 2z"/></svg>',
@@ -603,7 +943,7 @@ tinymce.IconManager.add('svg-icons', {
         'rotate-left': '<svg width="16" height="16"><path fill-rule="nonzero" d="M4.9 5.8l1.6-.3a1 1 0 11.3 2l-4 .7a1 1 0 01-1-.8l-.8-4a1 1 0 012-.3l.3 1.5A6.5 6.5 0 118.5 15a1 1 0 110-2 4.5 4.5 0 10-3.6-7.2z"/></svg>',
         'rotate-right': '<svg width="16" height="16"><path fill-rule="nonzero" d="M11.1 5.8A4.5 4.5 0 107.5 13a1 1 0 110 2 6.5 6.5 0 115.2-10.4l.3-1.5a1 1 0 012 .3l-.7 4a1 1 0 01-1.2.8l-4-.7a1 1 0 11.4-2l1.6.3z"/></svg>',
         'rtl': '<svg width="16" height="16"><path fill-rule="nonzero" d="M7 4v9a1 1 0 01-2 0V8H4a3 3 0 110-6h7a1 1 0 010 2h-1v9a1 1 0 01-2 0V4H7zm6.3 6.9l1.4 1.4a1 1 0 11-1.4 1.4l-2.1-2.1a1 1 0 010-1.4l2-2.2a1 1 0 011.5 1.5l-1.4 1.4zM5 4H4a1 1 0 100 2h1V4z"/></svg>',
-        'save': '<svg width="16" height="16"><path fill-rule="nonzero" d="M12 13h1V5.5L10.6 3H3v10h1v-3c0-1.1.9-2 2-2h4a2 2 0 012 2v3zM1 3c0-1.1.9-2 2-2h7.6c.5 0 1 .2 1.4.6l2.4 2.5c.4.3.6.8.6 1.4V13a2 2 0 01-2 2H3a2 2 0 01-2-2V3zm5 10h4v-3H6v3zM5 4h2c.6 0 1 .4 1 1v1c0 .6-.4 1-1 1H5a1 1 0 01-1-1V5c0-.6.4-1 1-1zm5 0c.6 0 1 .4 1 1v1a1 1 0 01-2 0V5c0-.6.4-1 1-1z"/></svg>',
+        'save': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M2 0h11.22a2 2 0 0 1 1.345.52l2.78 2.527A2 2 0 0 1 18 4.527V16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm0 2v14h14V4.527L13.22 2H2zm4 8h6a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm0 2v4h6v-4H6zm7-9a1 1 0 0 1 1 1v3a1 1 0 0 1-2 0V4a1 1 0 0 1 1-1zM5 3h5a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 3h3V5H6v1z"></path></svg>',
         'search': '<svg width="16" height="16"><path fill-rule="nonzero" d="M10.4 11.8a6 6 0 111.4-1.4l3 2.9a1 1 0 01-1.5 1.4l-2.9-2.9zm-.6-2a4 4 0 10-5.6-5.6 4 4 0 005.6 5.6z"/></svg>',
         'select-all': '<svg width="16" height="16"><path fill-rule="nonzero" d="M5 14c0 .6-.4 1-1 1H2a1 1 0 01-1-1v-2c0-.6.4-1 1-1V5a1 1 0 01-1-1V2c0-.6.4-1 1-1h2c.6 0 1 .4 1 1h6c0-.6.4-1 1-1h2c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1v6c.6 0 1 .4 1 1v2c0 .6-.4 1-1 1h-2a1 1 0 01-1-1H5zm0-2h6c0-.6.4-1 1-1V5a1 1 0 01-1-1H5c0 .6-.4 1-1 1v6c.6 0 1 .4 1 1z"/></svg>',
         'selected': '<svg width="16" height="16"><path fill-rule="nonzero" d="M8 15A7 7 0 118 1a7 7 0 010 14zm0-2A5 5 0 108 3a5 5 0 000 10zM4.5 8.7a1 1 0 011.4-1.4l1.4 1.4L10 5.8a1 1 0 111.4 1.5L8.7 10c-.4.4-.9 1-1.4.9-.5 0-1-.5-1.4-1L4.5 8.8z"/></svg>',
@@ -654,5 +994,5 @@ tinymce.IconManager.add('svg-icons', {
 }
 tinymce.init(inits);
 
-//Name Changed From Wordy To Linum on 8-8-2021(8 Aug 2021) - 8/8/2021     --13:29
-//Timing Before Competition - 2:24:99 --- M:S:MS
+//Name Changed From Wordy To WordKit on 8-8-2021(8 Aug 2021) - 8/8/2021     --13:29
+//Timing Before Speech Competition - 2:24:99 --- M:S:MS. I told the one By Swami Vivekananda
