@@ -184,10 +184,6 @@ var inits = {
 	  
   },	
   setup: function(editor) {
-	  editor.on('change', function() {twemoji.parse(tinymce.get('main').dom.select('*'), {
-		folder: 'svg',
-		ext: '.svg',
-	});})
 	  //Shortcuts
 	  editor.addShortcut(
       'meta+alt+s', 'Save File', function() {
