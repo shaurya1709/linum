@@ -31,7 +31,7 @@ var inits = {
     'undo redo | bold italic underline strikethrough fontselect fontsizeselect formatselect  alignleft aligncenter alignright alignjustify forecolor backcolor ltr rtl lineheight | subscript superscript | download upload impcur new | numlist bullist | outdent indent | preview print | casechange | operate | tts | spellcheck | version',    
   height: 580,
   skin_url: 'skin/skins/ui/linum',
-  icons: 'material',    
+  icons: 'svg-icons',    
   menubar: 'file insert edit formatpainter table',
   menu: {
       file: {title: 'File', items: 'm-save m-open m-impcur m-new'},
